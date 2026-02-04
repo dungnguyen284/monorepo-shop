@@ -1,18 +1,7 @@
 import type { UserResponseDto } from "../user/user.response.dto";
 
-export type AuthLoginDto = {
-	email: string;
-	password: string;
-};
-
-export type AuthRegisterDto = {
-	email: string;
-	password: string;
-	firstName?: string;
-	lastName?: string;
-	phone?: string;
-	address?: string;
-};
+// Re-export types from schemas for backward compatibility
+export type { AuthLoginDto, AuthRegisterDto } from "../../schemas/auth.schema";
 
 export type LoginResponseDto = {
 	accessToken: string;

@@ -1,14 +1,9 @@
-export type CreateProductDto = {
-	name: string;
-	description?: string;
-	price: number;
-	stock?: number;
-	image?: string;
-	isActive?: boolean;
-	categoryId: number;
-};
-
-export type UpdateProductDto = Partial<CreateProductDto>;
+// Re-export types from schemas for backward compatibility
+export type {
+	CreateProductDto,
+	UpdateProductDto,
+	ProductQueryDto,
+} from "../../schemas/product.schema";
 
 export type ProductDto = {
 	id: number;
@@ -25,14 +20,4 @@ export type ProductDto = {
 	};
 	createdAt: Date;
 	updatedAt: Date;
-};
-
-export type ProductQueryDto = {
-	page?: number;
-	limit?: number;
-	search?: string;
-	categoryId?: number;
-	minPrice?: number;
-	maxPrice?: number;
-	isActive?: boolean;
 };
